@@ -5,13 +5,13 @@
     "@rails/actioncable": "*",
     "@rails/activestorage": "*",
     "@rails/ujs": "*",
-    "@rails/webpacker": "*",
-    "ts-loader": "*",
+    "@rails/webpacker": "^4.2.2",
+    "ts-loader": "^6.2.1",
     "turbolinks": "*",
-    "typescript": "*"
+    "typescript": "^3.7.4"
   },
   "version": "*",
   "devDependencies": {
-    "webpack-dev-server": "*"
+    "webpack-dev-server": "^3.10.1"
   }
 }
