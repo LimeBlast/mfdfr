@@ -1,28 +1,31 @@
 import { Controller } from "stimulus"
 
 export default class DayToggleController extends Controller {
-  static classes = ["hidden"]
-  static targets = ["buttonText", "thingToHide"]
-  static values = { visible: Boolean }
+  static classes = ["hidden"];
+  static targets = ["buttonText", "thingToHide"];
+  static values = { visible: Boolean };
 
-  hiddenClass: string
-  buttonTextTarget: HTMLElement
-  thingToHideTarget: HTMLElement
-  visibleValue: boolean
+  hiddenClass: string;
+  buttonTextTarget: HTMLElement;
+  thingToHideTarget: HTMLElement;
+  visibleValue: boolean;
 
   connect() {
-    this.adjustTarget()
+    this.adjustTarget();
     this.adjustText()
   }
 
   toggle() {
     this.flipState()
-    this.adjustTarget()
-    this.adjustText()
   }
 
   flipState() {
     this.visibleValue = !this.visibleValue
+  }
+
+  visibleValueChanged() {
+    this.adjustTarget()
+    this.adjustText()
   }
 
   adjustTarget() {
