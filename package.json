@@ -5,13 +5,23 @@
     "@rails/actioncable": "*",
     "@rails/activestorage": "*",
     "@rails/ujs": "*",
-    "@rails/webpacker": "^4.2.2",
-    "ts-loader": "^6.2.1",
+    "@rails/webpacker": "*",
+    "ts-loader": "*",
     "turbolinks": "*",
-    "typescript": "^3.7.4"
+    "typescript": "*"
   },
   "version": "*",
   "devDependencies": {
-    "webpack-dev-server": "^3.10.1"
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-prettier": "*",
+    "prettier": "*",
+    "webpack-dev-server": "*"
+  },
+  "scripts": {
+    "eslint": "eslint '*/**/*.{js,ts,tsx}'",
+    "eslint_fix": "eslint '*/**/*.{js,ts,tsx}' --fix"
   }
 }
