@@ -7,15 +7,12 @@
       <% @schedule.schedule_days.each do |schedule_day| %>
         <div class="column has-text-centered js--schedule-day"
              data-action="click->calendar-toggle#toggle"
-             id="day-toggle-<%= schedule_day.day.by_example("2006-01-02") %>"
-             data-associated="day-body:<%= schedule_day.day.by_example("2006-01-02") %>">
+             id="day-toggle-<%= schedule_day.day.by_example("2006-01-02") %>">
           <%= schedule_day.day.by_example("Jan 2") %>
         </div>
       <% end %>
-
       <div class="column">Show All</div>
     </div>
-
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <div class="control">
@@ -28,13 +25,11 @@
       </div>
     </div>
   </section>
-
   <br>
-
-  <section>
+  <section class="js--day">
     <% @schedule.schedule_days.each do |schedule_day| %>
-      <section class="js--day day-body"
-               id="day-body:<%= schedule_day.day.by_example("2006-01-02") %>"
+      <section class="day-body"
+               id="day-body-<%= schedule_day.day.by_example("2006-01-02") %>"
                data-controller="day-toggle"
                data-day-toggle-hidden-class="is-hidden"
                data-day-toggle-visible-value="true">
@@ -53,7 +48,6 @@
                 <div class="column is-size-4 is-one-fifth">
                   <%= concert.start_time.by_example("3:04 PM") %>
                 </div>
-
                 <div class="column is-three-fifths">
                   <div class="name">
                     <div class="is-size-5 has-text-weight-bold">
@@ -70,7 +64,6 @@
                     <%= concert.venue.name %>
                   </div>
                 </div>
-
                 <div class="column is-size-4 is-one-fifth">On Sale</div>
               </div>
             </article>
